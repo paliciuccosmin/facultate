@@ -1,0 +1,5 @@
+Am incercat prima data sa dau ping catre 8.8.8.8 pentru a observa cum functioneaza site-ul
+Apoi am incercat sa afisez ierarhia din /home folosind || ls /home
+Am dat || ls /home/ctf
+Am afisat continutul fisierului flag folosind || cat /home/ctf/flag
+

@@ -1,0 +1,3 @@
+Am dat inspect paginii si am gasit flag-ul sub forma de comentariu
+Acesta era codificat in format Base64
+Am utilizat https://www.base64decode.org/ pentru a decodifica flag-ul

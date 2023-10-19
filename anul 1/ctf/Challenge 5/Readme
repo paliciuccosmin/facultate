@@ -1,0 +1,7 @@
+
+Am folosit username-ul "ctf" și parola "ctf" pentru a încerca să mă autentific pe site, dar nu am găsit nimic care să mă ajute acolo.
+Am încercat să trec de autentificare cu un sql injection, așa că am introdus inițial username-ul "'" pentru a vedea dacă pagina este vulnerabilă la sql injections.
+Mi-a apărut o altă eroare față de cea când am încercat să ghicesc datele de autentificare pentru admin, așa că m-am gândit că ar putea funcționa.
+Am folosit functia de proxy din Burpsuite pentru a modifica query-ul paginii
+Drept user am folosit "admin" iar in loc de parola am folosit o conditie care este intotdeauna adevarata "' or '1'='1"
+Am reusit sa trec in acest fel de autentificare si am gasit flag-ul

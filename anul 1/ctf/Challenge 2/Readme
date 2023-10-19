@@ -1,0 +1,5 @@
+Prima parte din flag "FFF{rirel_" am gasit-o in fisierul main.css sub forma de comentariu
+A doua parte din flag "svyr_" se afla in pagina, pentru a o face vizibila i-am modificat din proprietati culoarea din alb in negru
+A treia parte din flag "unf_" am gasit-o in fisierul hidden.js 
+Ultima parte din flag "srryvatf}" am gasit-o intr-un paragraf care avea proprietatea de invisible, am sters aceasta proprietate si a aparut o imagine in care era si flag-ul
+Deoarece flag-ul trebuia sa fie de forma SSS{} m-am gandit sa decodez flag-ul folosind cifrul lui Caesar mutand cu 13 pozitii literele
