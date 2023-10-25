@@ -11,10 +11,13 @@
         <a href="./cv.html">CV</a>
       </nav>
     <h1>Contact</h1>
-      <form action="mailto:adresaDeMail@domeniu.com" method="post">
-        <input type="text" name="subject" placeholder="Subiect">
-        <input type="text" name="body" placeholder="Mesaj">
-        <input type="submit" value="Trimite">
-      </form>
+     <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email"><br><br>
+  <label for="comment">Comment:</label>
+  <input type="text" id="comment" name="comment" size="50"><br><br>
+  <input type="submit" value="Send">
+  <input type="reset" value="Reset">
+</form>
 </body>
 </html>
