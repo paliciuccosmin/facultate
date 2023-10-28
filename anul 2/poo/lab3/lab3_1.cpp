@@ -37,7 +37,6 @@ int main() {
         if (objects[i].getAmount() > 50) {
             objects[i].count();
         }
-        cout << objects[i].getAmount() << endl;
     }
 
     cout << "Number of objects with amount greater than 50: " << Money::getCountHigherThan50() << std::endl;
