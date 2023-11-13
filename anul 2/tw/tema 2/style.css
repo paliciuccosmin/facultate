@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  article {
+    flex-basis: 33%;
+    margin-bottom: 20px;
+  }
+  
+  article h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  article p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  article img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
