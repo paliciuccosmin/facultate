@@ -1,0 +1,269 @@
+:root{
+  --main-color:#41403c;
+  --text-color:#41403c;
+  --bg-color:#dbd7cc;
+}
+body {
+  margin-top: 4.375em;
+  padding: 0;
+  background-color:var(--bg-color);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.625em 0;
+  z-index: 1000;
+  display: flex;
+  border-bottom: 0.125em solid var(--main-color); 
+  background-color: var(--bg-color);
+  justify-content: space-between;
+  align-items: center;
+}
+.left-buttons {
+  display: flex;
+}
+
+.center-buttons {
+  text-align: center;
+}
+
+.right-buttons {
+  display: flex;
+}
+.navbar hr {
+  width: 100%;
+  border: none;
+  height: 0.1875em;
+  background-color: white;
+  margin-top:0.0625em;
+}
+
+.title {
+  font-family:"";
+  font-size: 14em;
+  text-align: center;
+  color: #333; 
+  margin: 0em; 
+}
+
+.separator,.content-separator,.title-separator,.aboutseparator {
+  width: 97%;
+  height: 0.125em;
+  background-color: var(--main-color);
+  align-items: center;
+}
+.content-separator {
+  margin-top: 4.375em;
+  margin-bottom: 4.375em;
+}
+.title-separator {
+  margin-bottom: 4.375em;
+}
+.aboutseparator {
+  margin-top: 6em;
+  margin-bottom: 6.5em;
+}
+
+button {
+  font-family:"Dancing Script";
+  font-size:  1.25em;
+  background-color: transparent;
+  color: var(--main-color);
+  border: 0;
+  padding: 0.75em 1.25em; 
+  margin: 0 0.3125em; 
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Transparent buttons on hover */
+button:hover {
+  color: #333230;
+  transform: scale(1.15);
+}
+
+.container{
+  max-width: 76.5em;
+  width: 90%;
+  margin: auto;
+  padding: 2.5em 0;
+
+}
+.photo-gallery{
+  display: flex;
+  gap: 1.25em;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  gap: 4.375em;
+}
+.photo img{
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625em;
+  object-fit: cover;
+}
+
+.details {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .photo-gallery{
+    flex-direction: column;
+    align-items: center;
+  }
+  .title{
+    font-size: 4em;
+  }
+  .navbar{
+    display: none;
+  }
+  body{
+     margin-top: 0;
+  }
+}
+
+.description,
+.date {
+  font-family:"Dancing Script";
+  font-size: 1.0625em; 
+  margin-top: 0.3125em; 
+}
+
+.date {
+  font-style: italic;
+  font-size: 0.75em; 
+}
+.subtitle{
+  font-family: "Dancing Script";
+  font-size: 1.375em; 
+  text-align: center;
+  color: var(--main-color);
+  text-decoration: underline;
+}
+a{
+  color: var(--main-color);
+  text-decoration: none; 
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+.footer {
+  position: relative;
+  width: 97%;
+  background: var(--main-color);
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: var(--bg-color);
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: var(--bg-color);
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: var(--bg-color);
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("./poze/wave.png");
+  background-size:1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}

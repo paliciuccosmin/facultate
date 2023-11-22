@@ -1,0 +1,14 @@
+Student Report
+-----------------------
+Average Sleep Quality: 3.13725
+Average Number of Headaches: 2.01961
+Average Academic Performance: 3.2549
+Average Study Load: 2.78431
+Average Extracurricular Activities: 2.90196
+Average Stress Levels: 2.80392
+Report generated on: 2023-11-14 09:20:38 UTC
+-----------------------
+Stress Reduction Recommendations:
+1. Consider incorporating mindfulness or relaxation techniques into your daily routine.
+2. Plan and organize your study schedule to avoid last-minute stress.
+3. Ensure you are getting enough quality sleep to support overall well-being.
