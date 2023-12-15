@@ -1,2 +1,19 @@
 ﻿  laborator 8.cpp
+D:\facultate\anul 2\poo\lab8\laborator 8\laborator 8\Header.h(78,21): warning C4244: '*=': conversion from 'double' to '__int64', possible loss of data
+  (compiling source file 'laborator%208.cpp')
+  
+D:\facultate\anul 2\poo\lab8\laborator 8\laborator 8\Header.h(102,25): warning C4244: 'argument': conversion from '__int64' to '_Ty', possible loss of data
+D:\facultate\anul 2\poo\lab8\laborator 8\laborator 8\Header.h(102,25): warning C4244:         with
+D:\facultate\anul 2\poo\lab8\laborator 8\laborator 8\Header.h(102,25): warning C4244:         [
+D:\facultate\anul 2\poo\lab8\laborator 8\laborator 8\Header.h(102,25): warning C4244:             _Ty=int
+D:\facultate\anul 2\poo\lab8\laborator 8\laborator 8\Header.h(102,25): warning C4244:         ]
+  (compiling source file 'laborator%208.cpp')
+  
+D:\facultate\anul 2\poo\lab8\laborator 8\laborator 8\Header.h(110,15): warning C4244: 'argument': conversion from '__int64' to '_Elem', possible loss of data
+D:\facultate\anul 2\poo\lab8\laborator 8\laborator 8\Header.h(110,15): warning C4244:         with
+D:\facultate\anul 2\poo\lab8\laborator 8\laborator 8\Header.h(110,15): warning C4244:         [
+D:\facultate\anul 2\poo\lab8\laborator 8\laborator 8\Header.h(110,15): warning C4244:             _Elem=char
+D:\facultate\anul 2\poo\lab8\laborator 8\laborator 8\Header.h(110,15): warning C4244:         ]
+  (compiling source file 'laborator%208.cpp')
+  
   laborator 8.vcxproj -> D:\facultate\anul 2\poo\lab8\laborator 8\x64\Debug\laborator 8.exe
