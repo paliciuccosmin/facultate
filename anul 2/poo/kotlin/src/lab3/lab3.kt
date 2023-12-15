@@ -1,5 +1,6 @@
+package lab3
+
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import kotlin.math.abs
 
 class Student(
