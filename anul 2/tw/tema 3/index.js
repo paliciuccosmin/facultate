@@ -1,75 +1,107 @@
-var startTime = performance.now()
+var startTime = performance.now();
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-let dog = 
-{
-    "status": "success",
-    "message": "https://images.dog.ceo/breeds/dingo/n02115641_9067.jpg"
+async function getRandomDogImage() {
+    try {
+        const response = await fetch("https://dog.ceo/api/breeds/image/random");
+        const data = await response.json();
+        return data.message;
+    } catch (error) {
+        console.error("Error fetching dog image:", error);
+        return null;
+    }
 }
-canvas.width = 500;
-canvas.height = 300;
 
-var img = new Image();
-img.crossOrigin = 'Anonymous';
-img.src = dog.message;
 
-img.onload = Process;
+async function loadImageAndProcess() {
+    const dogImageUrl = await getRandomDogImage();
 
-function Pause() {
+    if (!dogImageUrl) {
+        return;
+    }
+
+    let dog = {
+        "status": "success",
+        "message": dogImageUrl
+    };
+
+    const jsonOutputDiv = document.getElementById("jsonOutput");
+    jsonOutputDiv.textContent = JSON.stringify(dog, null, 2);
+
+    var img = new Image();
+    img.crossOrigin = 'Anonymous';
+    img.src = dog.message;
+
+    img.onload = () => {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        Process(img);
+    };
+}
+
+function Pause(duration = 1000) {
     return new Promise(resolve => {
         setTimeout(() => {
             resolve('resolved');
-        }, 1000);
+        }, duration);
     });
 }
 
+async function Process(img) {
+    console.log("Original Image");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    await Pause();
 
-async function Process() {
+    // Step 2: Mirror the image
+    console.log("Mirrored Image");
     var mirroredImage = await mirrorImage(img);
-    console.time("Execution time");
-    await GrayScale(mirroredImage, 4);
-    console.timeEnd("Execution time");
-    await Pause();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(mirroredImage, 0, 0, canvas.width, canvas.height);
     
+    await Pause();
     console.time("Execution time");
-    await GrayScale(mirroredImage, 2.5);
+    await Contrast(mirroredImage, 4);
     console.timeEnd("Execution time");
     await Pause();
 
     console.time("Execution time");
-    await GrayScale(mirroredImage, 1.5);
+    await Contrast(mirroredImage, 2.5);
     console.timeEnd("Execution time");
     await Pause();
 
     console.time("Execution time");
-    await GrayScale(mirroredImage, 1);
+    await Contrast(mirroredImage, 1.5);
+    console.timeEnd("Execution time");
+    await Pause();
+
+    console.time("Execution time");
+    await Contrast(mirroredImage, 1);
     console.timeEnd("Execution time");
     await Pause();
 }
+function clamp(value) {
+    return Math.min(255, Math.max(0, Math.round(value)));
+}
 
+var contrastFactor = 1.5;  
 
-function GrayScale(img, dash) {
-
+function Contrast(img, dash) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     var scannedImage = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    console.log(scannedImage);
     var scannedData = scannedImage.data;
-    for (let i = 0 ; i < scannedData.length / dash ; i += 4) 
-    {
-        var total = scannedData[i] + scannedData[i + 1] + scannedData[i + 2]; 
-        var averageColorValue = total / 3;
-
-        scannedData[i] = averageColorValue;
-        scannedData[i + 1] = averageColorValue;
-        scannedData[i + 2] = averageColorValue;
+    for (let i = 0; i < scannedData.length/dash; i += 4) {
+        scannedData[i] = clamp((scannedData[i] - 128) * contrastFactor + 128);
+        scannedData[i + 1] = clamp((scannedData[i + 1] - 128) * contrastFactor + 128);
+        scannedData[i + 2] = clamp((scannedData[i + 2] - 128) * contrastFactor + 128);
     }
     scannedImage.data = scannedData;
     ctx.putImageData(scannedImage, 0, 0);
 
-
     var endTime = performance.now();
-    ctx.font = "30px w";
+    
 }
 
 function mirrorImage(img) {
@@ -86,21 +118,11 @@ function mirrorImage(img) {
             let index = (row * img.width + coll) * 4;
             let mirrorIndex = ((img.width * (row + 1) - 1) * 4 - coll * 4);
 
-            let a = data[index + 3];
-            data[index + 3] = data[mirrorIndex + 3];
-            data[mirrorIndex + 3] = a;
-
-            a = data[index + 2];
-            data[index + 2] = data[mirrorIndex + 2];
-            data[mirrorIndex + 2] = a;
-
-            a = data[index + 1];
-            data[index + 1] = data[mirrorIndex + 1];
-            data[mirrorIndex + 1] = a;
-
-            a = data[index];
-            data[index] = data[mirrorIndex];
-            data[mirrorIndex] = a;
+            for (let i = 0; i < 4; i++) {
+                let a = data[index + i];
+                data[index + i] = data[mirrorIndex + i];
+                data[mirrorIndex + i] = a;
+            }
         }
     }
     ctx.putImageData(imageData, 0, 0);
@@ -108,3 +130,6 @@ function mirrorImage(img) {
     mirroredImage.src = canvas.toDataURL();
     return mirroredImage;
 }
+
+
+loadImageAndProcess();
