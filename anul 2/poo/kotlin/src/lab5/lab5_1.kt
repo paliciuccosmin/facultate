@@ -30,6 +30,5 @@ fun main() {
     volumeCalculator.calculateVolume(5.0) // Volumul unui cub
     volumeCalculator.calculateVolume(3.0) // Volumul unei sfere
     volumeCalculator.calculateVolume(4.0, 6.0) // Volumul unei piramide
-    
     volumeCalculator.calculateVolume()
 }

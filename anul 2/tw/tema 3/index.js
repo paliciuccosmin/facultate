@@ -39,7 +39,7 @@ async function loadImageAndProcess() {
         Process(img);
     };
 }
-
+//functie pentru timeout de 1 secunda intre operatii
 function Pause(duration = 1000) {
     return new Promise(resolve => {
         setTimeout(() => {
@@ -47,14 +47,14 @@ function Pause(duration = 1000) {
         }, duration);
     });
 }
-
+//prelucrarea imaginii pe sectiuni
 async function Process(img) {
     console.log("Original Image");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     await Pause();
 
-    // Step 2: Mirror the image
+
     console.log("Mirrored Image");
     var mirroredImage = await mirrorImage(img);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -67,7 +67,7 @@ async function Process(img) {
     await Pause();
 
     console.time("Execution time");
-    await Contrast(mirroredImage, 2.5);
+    await Contrast(mirroredImage, 2);
     console.timeEnd("Execution time");
     await Pause();
 
@@ -81,12 +81,13 @@ async function Process(img) {
     console.timeEnd("Execution time");
     await Pause();
 }
+//functie pentru a mentine valoarea pixelilor sub 255
 function clamp(value) {
     return Math.min(255, Math.max(0, Math.round(value)));
 }
-
+//valoarea contrastului
 var contrastFactor = 1.5;  
-
+//functie pentru editarea pixelilor
 function Contrast(img, dash) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -103,7 +104,7 @@ function Contrast(img, dash) {
     var endTime = performance.now();
     
 }
-
+//functia  de mirror
 function mirrorImage(img) {
     var canvas = document.createElement("canvas");
     var ctx = canvas.getContext("2d");
