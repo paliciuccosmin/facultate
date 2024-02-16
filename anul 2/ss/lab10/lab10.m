@@ -3,6 +3,6 @@ s=tf('s');
 %t=0:1e-3:20;
 %x=5*cos(t)
 %lsim(x,H,t);
-
-H=5*(s+1)/(s*(s+10));
-bode(H)
+syms t
+f=(t+2)*step(t-2);
+laplace(f,t)
