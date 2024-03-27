@@ -1,0 +1,14 @@
+s=tf('s');
+P=1/s^2;
+C=(3*s+1)/(s+3);
+Ws=tf(mkfilter(1/(2*pi),3,'butterw'))
+Wt=(0.21*s)/(0.1*s+1);
+L=series(P,C);
+S=feedback(1,L,-1);
+T=1-S;
+pole(T)
+P=norm(S*Wt,inf)
+st_rob=norm(T*Wt,inf)
+bodemag(S,{0,1})
+bodemag(S,Ws*S)
+bodemag(T,Wt*S)

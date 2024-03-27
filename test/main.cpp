@@ -1,32 +1,15 @@
-#include<iostream>
-#include<string>
-#include<sstream>
-#include<vector>
-#include<algorithm>
+// ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include <vector>
 using namespace std;
 
-vector<int> dailyTemperatures(vector<int>& temperatures) {
-    vector<int> answers(temperatures.size(), 0);
-    for(int i = 0; i < temperatures.size() - 1; i++) {
-        for(int j = i + 1; j < temperatures.size(); j++) {
-            if(temperatures[j] > temperatures[i]) {
-                answers[i] = j - i;
-                break;
-            }
-        }
-    }
-    return answers;
-}
+#define N 10000
 
 int main() {
-    vector<int> temperatures = {73, 74, 75, 71, 69, 72, 76, 73};
-    vector<int> result = dailyTemperatures(temperatures);
-    
-    cout << "Daily Temperatures: ";
-    for(int i = 0; i < result.size(); i++) {
-        cout << result[i] << " ";
-    }
-    cout << endl;
 
-    return 0;
+    for (int i = 1; i < 15; i+=3) {
+        cout <<i;
+    }
 }
