@@ -54,70 +54,52 @@
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(430,100)" to="(430,170)"/>
-    <wire from="(40,110)" to="(100,110)"/>
-    <wire from="(150,350)" to="(210,350)"/>
-    <wire from="(420,60)" to="(470,60)"/>
-    <wire from="(430,170)" to="(480,170)"/>
-    <wire from="(320,80)" to="(320,100)"/>
-    <wire from="(230,60)" to="(340,60)"/>
-    <wire from="(230,170)" to="(340,170)"/>
-    <wire from="(320,100)" to="(430,100)"/>
-    <wire from="(150,350)" to="(150,370)"/>
-    <wire from="(320,120)" to="(420,120)"/>
-    <wire from="(320,120)" to="(320,150)"/>
-    <wire from="(250,330)" to="(290,330)"/>
-    <wire from="(250,350)" to="(290,350)"/>
-    <wire from="(100,80)" to="(100,110)"/>
-    <wire from="(120,370)" to="(150,370)"/>
-    <wire from="(400,170)" to="(430,170)"/>
-    <wire from="(120,330)" to="(210,330)"/>
-    <wire from="(320,80)" to="(340,80)"/>
-    <wire from="(320,150)" to="(340,150)"/>
-    <wire from="(100,110)" to="(100,150)"/>
-    <wire from="(400,60)" to="(420,60)"/>
-    <wire from="(90,40)" to="(170,40)"/>
-    <wire from="(420,60)" to="(420,120)"/>
-    <wire from="(100,150)" to="(170,150)"/>
-    <wire from="(100,80)" to="(170,80)"/>
-    <wire from="(100,190)" to="(170,190)"/>
-    <comp lib="0" loc="(470,60)" name="Pin">
+    <wire from="(290,330)" to="(350,330)"/>
+    <wire from="(510,240)" to="(570,240)"/>
+    <wire from="(510,260)" to="(570,260)"/>
+    <wire from="(510,190)" to="(700,190)"/>
+    <wire from="(510,320)" to="(700,320)"/>
+    <wire from="(290,200)" to="(290,330)"/>
+    <wire from="(260,330)" to="(290,330)"/>
+    <wire from="(310,180)" to="(310,310)"/>
+    <wire from="(380,330)" to="(410,330)"/>
+    <wire from="(380,180)" to="(410,180)"/>
+    <wire from="(460,190)" to="(510,190)"/>
+    <wire from="(460,320)" to="(510,320)"/>
+    <wire from="(260,180)" to="(310,180)"/>
+    <wire from="(290,200)" to="(410,200)"/>
+    <wire from="(660,250)" to="(700,250)"/>
+    <wire from="(510,190)" to="(510,240)"/>
+    <wire from="(310,310)" to="(410,310)"/>
+    <wire from="(510,260)" to="(510,320)"/>
+    <wire from="(310,180)" to="(350,180)"/>
+    <wire from="(620,250)" to="(630,250)"/>
+    <comp lib="1" loc="(380,330)" name="NOT Gate"/>
+    <comp lib="1" loc="(460,320)" name="AND Gate"/>
+    <comp lib="0" loc="(260,330)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(460,190)" name="AND Gate"/>
+    <comp lib="0" loc="(700,190)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(290,350)" name="Pin">
+    <comp lib="1" loc="(380,180)" name="NOT Gate"/>
+    <comp lib="1" loc="(620,250)" name="OR Gate"/>
+    <comp lib="1" loc="(660,250)" name="NOT Gate"/>
+    <comp lib="0" loc="(700,250)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(230,60)" name="NAND Gate"/>
-    <comp lib="0" loc="(40,110)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(290,330)" name="Pin">
+    <comp lib="0" loc="(700,320)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(230,170)" name="NAND Gate"/>
-    <comp lib="0" loc="(120,370)" name="Clock"/>
-    <comp lib="1" loc="(400,60)" name="NAND Gate"/>
-    <comp lib="0" loc="(90,40)" name="Pin">
+    <comp lib="0" loc="(260,180)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="4" loc="(250,330)" name="J-K Flip-Flop"/>
-    <comp lib="0" loc="(120,330)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(480,170)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(100,190)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(400,170)" name="NAND Gate"/>
   </circuit>
 </project>

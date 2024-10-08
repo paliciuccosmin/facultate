@@ -54,44 +54,46 @@
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(120,200)" to="(120,220)"/>
-    <wire from="(40,240)" to="(210,240)"/>
-    <wire from="(120,220)" to="(210,220)"/>
-    <wire from="(300,260)" to="(320,260)"/>
-    <wire from="(160,200)" to="(160,210)"/>
-    <wire from="(40,200)" to="(40,240)"/>
-    <wire from="(250,220)" to="(320,220)"/>
-    <wire from="(300,230)" to="(300,260)"/>
-    <wire from="(160,210)" to="(210,210)"/>
-    <wire from="(250,230)" to="(300,230)"/>
-    <wire from="(80,230)" to="(210,230)"/>
-    <wire from="(80,200)" to="(80,230)"/>
-    <comp lib="0" loc="(80,200)" name="Pin">
-      <a name="facing" val="south"/>
+    <wire from="(300,290)" to="(300,360)"/>
+    <wire from="(130,240)" to="(280,240)"/>
+    <wire from="(130,220)" to="(280,220)"/>
+    <wire from="(70,210)" to="(70,250)"/>
+    <wire from="(160,280)" to="(280,280)"/>
+    <wire from="(70,260)" to="(70,270)"/>
+    <wire from="(70,250)" to="(70,260)"/>
+    <wire from="(160,230)" to="(210,230)"/>
+    <wire from="(50,360)" to="(70,360)"/>
+    <wire from="(250,360)" to="(300,360)"/>
+    <wire from="(110,360)" to="(130,360)"/>
+    <wire from="(70,270)" to="(280,270)"/>
+    <wire from="(70,260)" to="(280,260)"/>
+    <wire from="(70,250)" to="(280,250)"/>
+    <wire from="(70,210)" to="(280,210)"/>
+    <wire from="(160,230)" to="(160,280)"/>
+    <wire from="(160,80)" to="(160,230)"/>
+    <wire from="(130,220)" to="(130,240)"/>
+    <wire from="(70,360)" to="(80,360)"/>
+    <wire from="(120,80)" to="(160,80)"/>
+    <wire from="(130,240)" to="(130,360)"/>
+    <wire from="(240,230)" to="(280,230)"/>
+    <wire from="(70,270)" to="(70,360)"/>
+    <wire from="(320,250)" to="(390,250)"/>
+    <comp lib="1" loc="(240,230)" name="NOT Gate"/>
+    <comp lib="1" loc="(110,360)" name="NOT Gate"/>
+    <comp lib="2" loc="(320,250)" name="Multiplexer">
+      <a name="select" val="3"/>
+    </comp>
+    <comp lib="0" loc="(50,360)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(40,200)" name="Pin">
-      <a name="facing" val="south"/>
+    <comp lib="0" loc="(120,80)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="2" loc="(250,220)" name="Priority Encoder">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="0" loc="(320,220)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="2"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(120,200)" name="Pin">
-      <a name="facing" val="south"/>
+    <comp lib="0" loc="(250,360)" name="Pin">
+      <a name="width" val="3"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(160,200)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(320,260)" name="Pin">
+    <comp lib="0" loc="(390,250)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>

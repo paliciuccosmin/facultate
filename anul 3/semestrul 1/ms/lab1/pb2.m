@@ -1,0 +1,10 @@
+A=40*pi/180;
+v0=20;
+g=9.81;
+thit=2*v0*sin(A)/g;
+t=0:(thit/100):thit;
+H=v0*t*sin(A)-0.5*g*t.^2;
+v=sqrt(v0^2-2*v0*g*t*sin(A)+g^2*t.^2);
+u=find(H>=6&v<=16);
+t_1=(u(1)-1)*(thit/100)
+t_2=(u(length(u))-1)*(thit/100)

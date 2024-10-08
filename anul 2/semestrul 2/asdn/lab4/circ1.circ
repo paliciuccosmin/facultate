@@ -54,47 +54,48 @@
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(530,190)" to="(530,230)"/>
-    <wire from="(410,290)" to="(470,290)"/>
-    <wire from="(470,270)" to="(470,290)"/>
-    <wire from="(500,230)" to="(530,230)"/>
-    <wire from="(610,190)" to="(610,250)"/>
-    <wire from="(500,250)" to="(610,250)"/>
-    <wire from="(480,270)" to="(480,320)"/>
-    <wire from="(570,190)" to="(570,240)"/>
-    <wire from="(500,240)" to="(570,240)"/>
-    <wire from="(500,260)" to="(650,260)"/>
-    <wire from="(440,320)" to="(480,320)"/>
-    <wire from="(650,190)" to="(650,260)"/>
-    <comp lib="2" loc="(480,270)" name="Decoder">
-      <a name="select" val="2"/>
+    <wire from="(180,280)" to="(210,280)"/>
+    <wire from="(350,360)" to="(440,360)"/>
+    <wire from="(350,230)" to="(440,230)"/>
+    <wire from="(350,490)" to="(440,490)"/>
+    <wire from="(180,450)" to="(270,450)"/>
+    <wire from="(210,280)" to="(210,350)"/>
+    <wire from="(270,450)" to="(270,490)"/>
+    <wire from="(210,230)" to="(210,280)"/>
+    <wire from="(270,370)" to="(270,450)"/>
+    <wire from="(210,350)" to="(210,470)"/>
+    <wire from="(270,490)" to="(310,490)"/>
+    <wire from="(270,370)" to="(310,370)"/>
+    <wire from="(270,250)" to="(270,370)"/>
+    <wire from="(270,250)" to="(310,250)"/>
+    <wire from="(210,230)" to="(310,230)"/>
+    <wire from="(210,350)" to="(310,350)"/>
+    <wire from="(210,470)" to="(310,470)"/>
+    <comp lib="3" loc="(350,480)" name="Comparator"/>
+    <comp lib="0" loc="(180,450)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x2"/>
     </comp>
-    <comp lib="0" loc="(530,190)" name="Pin">
-      <a name="facing" val="south"/>
+    <comp lib="0" loc="(180,280)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x5"/>
+    </comp>
+    <comp lib="3" loc="(350,240)" name="Comparator"/>
+    <comp lib="0" loc="(440,230)" name="Pin">
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(410,290)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(570,190)" name="Pin">
-      <a name="facing" val="south"/>
+    <comp lib="3" loc="(350,360)" name="Comparator"/>
+    <comp lib="0" loc="(440,490)" name="Pin">
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(650,190)" name="Pin">
-      <a name="facing" val="south"/>
+    <comp lib="0" loc="(440,360)" name="Pin">
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(610,190)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(440,320)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
     </comp>
   </circuit>
 </project>

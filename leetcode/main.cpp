@@ -1,11 +1,6 @@
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
-
-int main() {
-  int val =3.14;
-  cout << val << endl;
-  return 0;
+int f(int n)
+{
+    if(n==0)
+        return 0;
+    else return 1+f(n-1);
 }
