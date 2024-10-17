@@ -1,6 +1,10 @@
-int f(int n)
+#include <iostream>
+using namespace std;
+int main()
 {
-    if(n==0)
-        return 0;
-    else return 1+f(n-1);
+    int x,y,n;
+    cin>>x>>y>>n;
+        if(y==x*n)       
+                cout<<n;
+return 0;
 }
