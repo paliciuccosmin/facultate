@@ -1,0 +1,132 @@
+/* General body styling */
+body.home-background {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the entire home page */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Horizontally center the container but not the content inside */
+    padding: 20px;
+    text-align: left; /* Ensures text is aligned to the left */
+}
+
+/* Header section styling */
+.home-header {
+    display: flex;
+    justify-content: space-between; /* Distribute space between title and logout button */
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.home-header h1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: left; /* Ensure header text is aligned left */
+}
+
+/* Logout button styling */
+.logout-btn {
+    background-color: #ff4d4f;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #d9363e;
+}
+
+/* Dashboard section */
+.home-dashboard {
+    margin-bottom: 30px;
+    text-align: left; /* Ensure text is aligned to the left */
+}
+
+.home-dashboard h2 {
+    font-size: 20px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.dashboard-summary {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-item {
+    text-align: center;
+}
+
+.summary-item h3 {
+    font-size: 18px;
+    color: #003366;
+}
+
+.summary-item p {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+    color: #333;
+}
+
+/* Car listings section */
+.home-car-listings {
+    margin-top: 30px;
+    text-align: left; /* Ensure text is aligned to the left */
+}
+
+.home-car-listings h2 {
+    font-size: 20px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.car-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Ensure individual car items are aligned left */
+}
+
+.car-item h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.car-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .dashboard-summary {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .car-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}

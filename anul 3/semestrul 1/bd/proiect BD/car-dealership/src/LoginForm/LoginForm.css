@@ -1,0 +1,167 @@
+:root {
+    --primary-bg-color: #ffffff;   /* Dark gray/black for background */
+    --primary-text-color: #000000;  /* White for text */
+    --accent-color: #ff4500;        /* Bright orange-red for accents */
+    --input-border-color: #cccccc;  /* Light gray for input borders */
+    --input-bg-color: transparent;  /* Transparent input background */
+    --button-bg-color: #ff4500;     /* Same bright color for buttons */
+    --button-text-color: #ffffff;   /* White for button text */
+    --hover-link-color: #ffa07a;    /* Light orange for hover effects */
+}
+ body.login-background {
+    background-image:url("D:\facultate\anul 3\semestrul 1\bd\proiect BD\car-dealership\public\bg.jpg");
+    background-size: cover;
+}
+.wrapper {
+    width: 400px;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: var(--input-bg-color);
+    outline: none;
+    border: 2px solid var(--input-border-color);
+    border-radius: 40px;
+    font-size: 16px;
+    color: var(--primary-text-color);
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: var(--primary-text-color);
+    font-size: 18px;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    color: var(--primary-text-color);
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.wrapper .remember-forgot label input {
+    accent-color: var(--primary-text-color);
+    margin-right: 4px;
+}
+
+.remember-forgot a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    color: var(--hover-link-color);
+    text-decoration: underline;
+}
+
+.wrapper button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: var(--button-bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--button-text-color);
+    border-radius: 40px;
+    font-weight: 700;
+}
+
+.wrapper .register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14.5px;
+}
+
+.wrapper .register-link a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.wrapper .register-link a:hover {
+    color: var(--hover-link-color);
+    text-decoration: underline;
+}
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 90%;  /* Make the form take up 90% of the screen width */
+        padding: 20px 30px;
+        margin: 20px auto; /* Center the form with margin */
+    }
+
+    .wrapper h1 {
+        font-size: 28px;  /* Adjust the font size */
+    }
+
+    .input-box {
+        margin: 20px 0;  /* Reduce margin between inputs */
+    }
+
+    .input-box input {
+        font-size: 14px;
+        padding: 15px 40px 15px 15px;  /* Adjust padding for smaller inputs */
+    }
+
+    .wrapper button {
+        height: 45px;  /* Adjust button size */
+        font-size: 16px;  /* Adjust font size of button */
+    }
+
+    .wrapper .register-link {
+        font-size: 12px;  /* Adjust the font size of the link */
+    }
+}
+
+/* Media query for extra small screens */
+@media only screen and (max-width: 480px) {
+    .wrapper h1 {
+        font-size: 24px;  /* Further adjust for very small screens */
+    }
+
+    .input-box input {
+        font-size: 12px;  /* Smaller input text */
+        padding: 12px 35px 12px 12px;  /* Adjust padding */
+    }
+
+    .wrapper button {
+        height: 40px;
+        font-size: 14px;
+    }
+
+}
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: -15px; 
+    margin-bottom: 20px; 
+}
