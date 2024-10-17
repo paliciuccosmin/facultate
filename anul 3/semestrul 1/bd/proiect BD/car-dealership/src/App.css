@@ -1,0 +1,12 @@
+/* Ensure body and any parent elements allow for wider content */
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100%; /* Ensure the container takes full available width */
+  width: 100%;
+}
